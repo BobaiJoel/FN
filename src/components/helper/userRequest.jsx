@@ -10,9 +10,14 @@ axios.defaults.withCredentials = true;
 //   toast.loading("Please wait...");
 // }
 // let State = true;
+
 export function url() {
-  return "https://backend.plainscapitalbk.com";
+  return "plainscapitalbn.nextmovev.com";
 }
+
+// export function url() {
+//   return "http://192.168.43.89:4000";
+// }
 export async function reqister(inputs) {
   // toast.loading("Please wait...");
   toast.info("Please wait...", {
