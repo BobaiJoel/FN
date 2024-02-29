@@ -70,8 +70,9 @@ const Login = () => {
       sendRequest().then((data) => {
         try {
           console.log(data?.user);
-          setIsLoggedIn(true);
+
           setUser(data?.user);
+          setIsLoggedIn(true);
           getTransactions().then((data) => {
             setTransaction(data);
             //   console.log(data);
@@ -111,7 +112,7 @@ const Login = () => {
   //     }
   //   });
   // }, [setIsLoggedIn, setUser]);
-  // console.log(isLoggedIn);
+  console.log(isLoggedIn);
   if (isLoggedIn === true) {
     return <Navigate to="/" />;
   } else {
