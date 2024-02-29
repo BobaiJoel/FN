@@ -14,7 +14,12 @@ const Login = () => {
   // const moveTo = useNavigate();
   const side = useMediaQuery("(min-width: 1086px)");
   const setUser = useAuthStore((state) => state.setUser);
+  const setTransaction = useAuthStore((state) => state.setTransaction);
   const setIsLoggedIn = useAuthStore((state) => state.setIsLoggedIn);
+  let user = useAuthStore((state) => {
+    return state.auth.user;
+  });
+
   let isLoggedIn = useAuthStore((state) => {
     return state.auth.isLoggedIn;
   });
@@ -31,7 +36,30 @@ const Login = () => {
 
     if (res) {
       const data = await res?.data;
-      console.log(data);
+      // console.log(data);
+      return data;
+    }
+  };
+
+  const getTransactions = async () => {
+    const res = await axios
+      .post(
+        `${url()}/api/v1/transaction/get`,
+        {
+          userTransactionId: user?._id,
+        },
+        {
+          withCredentials: true,
+        }
+      )
+      .catch((err) => {
+        // toast.error(err.response.data);
+        console.log(err.response.data);
+        // console.log(err);
+      });
+
+    if (res) {
+      const data = await res?.data;
       return data;
     }
   };
@@ -41,9 +69,13 @@ const Login = () => {
       firstRender = false;
       sendRequest().then((data) => {
         try {
-          console.log(data.user);
+          console.log(data?.user);
           setIsLoggedIn(true);
           setUser(data?.user);
+          getTransactions().then((data) => {
+            setTransaction(data);
+            //   console.log(data);
+          });
         } catch (error) {
           setIsLoggedIn(false);
         }

@@ -29,7 +29,7 @@ function Transaction() {
       .post(
         `${url()}/api/v1/transaction/get`,
         {
-          userTransactionId: user._id,
+          userTransactionId: user?._id,
         },
         {
           withCredentials: true,
@@ -42,7 +42,7 @@ function Transaction() {
       });
 
     if (res) {
-      const data = await res.data;
+      const data = await res?.data;
       return data;
     }
   };
