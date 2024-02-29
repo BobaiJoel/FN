@@ -8,6 +8,7 @@ const PaymentHistory = () => {
   let originalTransaction = useAuthStore((state) => {
     return state.auth.transaction;
   });
+  console.log(originalTransaction);
   const reversedTransaction = [...originalTransaction].reverse();
 
   return (
