@@ -33,7 +33,7 @@ const GeneralApp = () => {
 
     if (res) {
       const data = await res?.data;
-      console.log(data);
+      // console.log(data);
       return data;
     }
   };
@@ -43,9 +43,10 @@ const GeneralApp = () => {
       firstRender = false;
       sendRequest().then((data) => {
         try {
-          console.log(data.user);
-          setIsLoggedIn(true);
+          console.log(data?.user);
+
           setUser(data?.user);
+          setIsLoggedIn(true);
         } catch (error) {
           setIsLoggedIn(false);
         }

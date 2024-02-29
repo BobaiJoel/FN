@@ -112,7 +112,7 @@ const Login = () => {
   //   });
   // }, [setIsLoggedIn, setUser]);
   // console.log(isLoggedIn);
-  if (isLoggedIn) {
+  if (isLoggedIn === true) {
     return <Navigate to="/" />;
   } else {
     return (
