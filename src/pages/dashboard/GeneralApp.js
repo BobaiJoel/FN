@@ -64,7 +64,7 @@ const GeneralApp = () => {
   useEffect(() => {
     if (firstRender) {
       firstRender = false;
-      sendRequest().then((data) => {
+      sendRequest().then(async (data) => {
         try {
           if (data?.user) {
             console.log(data?.user);

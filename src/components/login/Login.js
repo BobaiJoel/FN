@@ -64,12 +64,12 @@ const Login = () => {
   useEffect(() => {
     if (firstRender) {
       firstRender = false;
-      sendRequest().then((data) => {
+      sendRequest().then(async (data) => {
         try {
           if (data?.user) {
             console.log(data?.user);
 
-            setUser(data?.user);
+            await setUser(data?.user);
             setIsLoggedIn(true);
             getTransactions(data?.user?._id).then((data) => {
               setTransaction(data);
