@@ -14,9 +14,6 @@ const GeneralApp = () => {
   const setTransaction = useAuthStore((state) => state.setTransaction);
   const setUser = useAuthStore((state) => state.setUser);
   const setIsLoggedIn = useAuthStore((state) => state.setIsLoggedIn);
-  let user = useAuthStore((state) => {
-    return state.auth.user;
-  });
   let isLoggedIn = useAuthStore((state) => {
     return state.auth.isLoggedIn;
   });
@@ -25,7 +22,6 @@ const GeneralApp = () => {
     setActiveNavItem("Overview");
   });
   const getTransactions = async (id) => {
-    console.log(user);
     const res = await axios
       .post(
         `${url()}/api/v1/transaction/get`,

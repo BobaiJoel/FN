@@ -16,9 +16,6 @@ const Login = () => {
   const setUser = useAuthStore((state) => state.setUser);
   const setTransaction = useAuthStore((state) => state.setTransaction);
   const setIsLoggedIn = useAuthStore((state) => state.setIsLoggedIn);
-  let user = useAuthStore((state) => {
-    return state.auth.user;
-  });
 
   let isLoggedIn = useAuthStore((state) => {
     return state.auth.isLoggedIn;
@@ -41,12 +38,12 @@ const Login = () => {
     }
   };
 
-  const getTransactions = async () => {
+  const getTransactions = async (id) => {
     const res = await axios
       .post(
         `${url()}/api/v1/transaction/get`,
         {
-          userTransactionId: user?._id,
+          userTransactionId: id,
         },
         {
           withCredentials: true,
@@ -70,11 +67,11 @@ const Login = () => {
       sendRequest().then((data) => {
         try {
           if (data?.user) {
-            console.log();
+            console.log(data?.user);
 
             setUser(data?.user);
             setIsLoggedIn(true);
-            getTransactions().then((data) => {
+            getTransactions(data?.user?._id).then((data) => {
               setTransaction(data);
               //   console.log(data);
             });
