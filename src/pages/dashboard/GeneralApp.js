@@ -43,10 +43,14 @@ const GeneralApp = () => {
       firstRender = false;
       sendRequest().then((data) => {
         try {
-          console.log(data?.user);
+          if (data?.user) {
+            console.log(data?.user);
 
-          setUser(data?.user);
-          setIsLoggedIn(true);
+            setUser(data?.user);
+            setIsLoggedIn(true);
+          } else {
+            setIsLoggedIn(false);
+          }
         } catch (error) {
           setIsLoggedIn(false);
         }

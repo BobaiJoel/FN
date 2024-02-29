@@ -69,14 +69,18 @@ const Login = () => {
       firstRender = false;
       sendRequest().then((data) => {
         try {
-          console.log(data?.user);
+          if (data?.user) {
+            console.log();
 
-          setUser(data?.user);
-          setIsLoggedIn(true);
-          getTransactions().then((data) => {
-            setTransaction(data);
-            //   console.log(data);
-          });
+            setUser(data?.user);
+            setIsLoggedIn(true);
+            getTransactions().then((data) => {
+              setTransaction(data);
+              //   console.log(data);
+            });
+          } else {
+            setIsLoggedIn(false);
+          }
         } catch (error) {
           setIsLoggedIn(false);
         }
