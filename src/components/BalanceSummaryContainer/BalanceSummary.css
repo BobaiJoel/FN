@@ -1,0 +1,14 @@
+.summary {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 100%;
+  /* background-color: brown; */
+  height: 85px;
+  font-size: var(--font-size-base);
+  color: var(--color-darkgray-100);
+  font-family: var(--font-poppins);
+  padding-top: 80px;
+  margin: auto;
+}

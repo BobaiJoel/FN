@@ -1,0 +1,82 @@
+.lines-icon {
+  position: absolute;
+  bottom: -68.5px;
+  left: calc(50% - 165.5px);
+  width: 653.76px;
+  height: 219px;
+  opacity: 0.2;
+  mix-blend-mode: normal;
+}
+.payment-method-icon {
+  position: absolute;
+  top: 139px;
+  left: 245px;
+  border-radius: var(--br-9xs);
+  width: 75.33px;
+  height: 42px;
+}
+.saku {
+  font-weight: 500;
+}
+.card-number1,
+.text {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+}
+.card-number1 {
+  top: 24px;
+  left: 0;
+  font-size: var(--font-size-base);
+  letter-spacing: 0.15em;
+  font-weight: 600;
+}
+.cardholder,
+.expiry {
+  position: absolute;
+  top: 0;
+  letter-spacing: 0.05em;
+  font-weight: 600;
+}
+.cardholder {
+  left: 0;
+  text-transform: uppercase;
+}
+.expiry {
+  left: 154px;
+  text-align: right;
+}
+.card-number-group {
+  position: absolute;
+  top: 131px;
+  left: 20px;
+  width: 196px;
+  height: 48px;
+  font-size: var(--font-size-xs);
+}
+.paypass-icon {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 20px;
+  height: 24px;
+  overflow: hidden;
+}
+.credit-card-mockup {
+  position: relative;
+  /* top: 58px;
+  left: 0; */
+  border-radius: var(--br-xl);
+  /* background: linear-gradient(45deg, #013a53, #00b3ff); */
+  background: linear-gradient(45deg, #013a53, #aa272f);
+  box-shadow: 8px 10px 16px rgba(0, 0, 0, 0.05);
+  width: 331px;
+  height: 199px;
+  overflow: hidden;
+  text-align: left;
+  font-size: var(--font-size-base);
+  color: var(--white);
+  font-family: var(--font-poppins);
+  margin-top: 30px;
+  margin-bottom: 20px;
+}

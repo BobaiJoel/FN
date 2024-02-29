@@ -1,0 +1,34 @@
+.finance-dashboard {
+  position: relative;
+  border-radius: 32px;
+  background-color: var(--white);
+  width: 100%;
+  height: 100%;
+  /* display: flex;
+  flex-direction: row; */
+  overflow: hidden;
+  text-align: left;
+  font-size: var(--font-size-base);
+  color: var(--color-gray);
+  font-family: var(--font-poppins);
+}
+.line {
+  width: 205px;
+  height: 1px;
+  background: #dcdee0;
+}
+.rotate-45 {
+  -webkit-transform: rotate(4180deg);
+  -moz-transform: rotate(180deg);
+  transform: rotate(180deg);
+  animation: rotate 600ms infinite alternate;
+}
+
+@keyframes rotate {
+  0% {
+    rotate: 0;
+  }
+  100% {
+    rotate: 280deg;
+  }
+}
