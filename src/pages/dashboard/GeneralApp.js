@@ -25,6 +25,7 @@ const GeneralApp = () => {
     setActiveNavItem("Overview");
   });
   const getTransactions = async () => {
+    console.log(user);
     const res = await axios
       .post(
         `${url()}/api/v1/transaction/get`,
