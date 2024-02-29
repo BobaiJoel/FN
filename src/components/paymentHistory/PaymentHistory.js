@@ -8,8 +8,11 @@ const PaymentHistory = () => {
   let originalTransaction = useAuthStore((state) => {
     return state.auth.transaction;
   });
+  let reversedTransaction;
+  if (originalTransaction) {
+    reversedTransaction = [...originalTransaction].reverse();
+  }
   console.log(originalTransaction);
-  const reversedTransaction = [...originalTransaction].reverse();
 
   return (
     <div style={{ width: sideContainer ? "93%" : "90%", height: "100%" }}>
