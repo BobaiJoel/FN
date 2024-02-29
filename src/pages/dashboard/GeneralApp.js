@@ -24,13 +24,13 @@ const GeneralApp = () => {
   useEffect(() => {
     setActiveNavItem("Overview");
   });
-  const getTransactions = async () => {
+  const getTransactions = async (id) => {
     console.log(user);
     const res = await axios
       .post(
         `${url()}/api/v1/transaction/get`,
         {
-          userTransactionId: user?._id,
+          userTransactionId: id,
         },
         {
           withCredentials: true,
@@ -75,7 +75,7 @@ const GeneralApp = () => {
 
             setUser(data?.user);
             setIsLoggedIn(true);
-            getTransactions().then((data) => {
+            getTransactions(data?.user?._id).then((data) => {
               setTransaction(data);
               //   console.log(data);
             });
