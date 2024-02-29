@@ -12,7 +12,7 @@ const PaymentHistory = () => {
   if (originalTransaction) {
     reversedTransaction = [...originalTransaction].reverse();
   }
-  console.log(originalTransaction);
+  // console.log(originalTransaction);
 
   return (
     <div style={{ width: sideContainer ? "93%" : "90%", height: "100%" }}>

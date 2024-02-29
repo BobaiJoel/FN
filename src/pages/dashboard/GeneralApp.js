@@ -11,8 +11,12 @@ const GeneralApp = () => {
   const sideContainer = useMediaQuery("(max-width: 1339px)");
   axios.defaults.withCredentials = true;
   const setActiveNavItem = useAuthStore((state) => state.setActiveNavItem);
+  const setTransaction = useAuthStore((state) => state.setTransaction);
   const setUser = useAuthStore((state) => state.setUser);
   const setIsLoggedIn = useAuthStore((state) => state.setIsLoggedIn);
+  let user = useAuthStore((state) => {
+    return state.auth.user;
+  });
   let isLoggedIn = useAuthStore((state) => {
     return state.auth.isLoggedIn;
   });
@@ -20,6 +24,28 @@ const GeneralApp = () => {
   useEffect(() => {
     setActiveNavItem("Overview");
   });
+  const getTransactions = async () => {
+    const res = await axios
+      .post(
+        `${url()}/api/v1/transaction/get`,
+        {
+          userTransactionId: user?._id,
+        },
+        {
+          withCredentials: true,
+        }
+      )
+      .catch((err) => {
+        // toast.error(err.response.data);
+        console.log(err.response.data);
+        // console.log(err);
+      });
+
+    if (res) {
+      const data = await res?.data;
+      return data;
+    }
+  };
   // downwards is to keep the user LOGIN
   const sendRequest = async () => {
     const res = await axios
@@ -48,6 +74,10 @@ const GeneralApp = () => {
 
             setUser(data?.user);
             setIsLoggedIn(true);
+            getTransactions().then((data) => {
+              setTransaction(data);
+              //   console.log(data);
+            });
           } else {
             setIsLoggedIn(false);
           }
