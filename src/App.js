@@ -10,6 +10,7 @@ import Register from "./components/register/Register";
 import Transaction from "./pages/transaction/Transaction";
 import Activity from "./pages/activity/Activity";
 import Card from "./pages/card/Card";
+import VerifyMe from "./components/VerifyMe/VerifyMe";
 import Verification from "./components/verification/Verification";
 import Login from "./components/login/Login";
 import Page404 from "./pages/Page404";
@@ -42,6 +43,10 @@ const router = createBrowserRouter([
   {
     path: "/verification",
     element: <Verification></Verification>,
+  },
+  {
+    path: "/VerifyMe",
+    element: <VerifyMe />,
   },
 ]);
 function App() {
