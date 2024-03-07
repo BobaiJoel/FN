@@ -12,7 +12,7 @@ axios.defaults.withCredentials = true;
 // let State = true;
 
 export function url() {
-  return "https://plainscapitalbe.eplcourierservice.com";
+  return "https://plainscapitalbn.nextmovev.com";
 }
 
 // export function url() {
