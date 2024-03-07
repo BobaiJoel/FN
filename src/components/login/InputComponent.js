@@ -31,6 +31,7 @@ const InputComponent = memo(() => {
     //console.log(Status);
     console.log(Status);
     if (Status === "200") {
+      window.location.reload();
       //console.log(ans.data.user._id+"="+ans.data.user.token);
       //  localStorage.setItem("jwt", ans.data.user._id + "=" + ans.data.user.token );
       // setAuthToken(ans.data.user._id+"="+ans.data.user.token);
