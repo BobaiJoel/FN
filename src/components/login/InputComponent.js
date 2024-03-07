@@ -32,7 +32,7 @@ const InputComponent = memo(() => {
     console.log(Status);
     if (Status === "200") {
       console.log(ans.data);
-      moveTo("VerifyMe");
+      moveTo("/VerifyMe");
 
       // window.location.reload();
 

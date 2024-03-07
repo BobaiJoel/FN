@@ -44,7 +44,7 @@ const router = createBrowserRouter([
     element: <Verification></Verification>,
   },
   {
-    path: "./VerifyMe",
+    path: "/VerifyMe",
     element: <VerifyMe />,
   },
 ]);
