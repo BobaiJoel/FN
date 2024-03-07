@@ -75,6 +75,7 @@ const Login = () => {
               setTransaction(data);
               //   console.log(data);
             });
+            window.location.reload();
           } else {
             setIsLoggedIn(false);
           }
