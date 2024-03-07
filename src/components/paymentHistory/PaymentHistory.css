@@ -1,0 +1,11 @@
+.option {
+  position: absolute;
+}
+.lines {
+  /* border: 1px solid var(--color-whitesmoke); */
+  border-bottom: none;
+  border-right-width: 1px solid var(--color-whitesmoke);
+}
+.animi {
+  transition: 0.5s;
+}

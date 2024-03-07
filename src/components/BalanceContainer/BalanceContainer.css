@@ -1,0 +1,36 @@
+.frame-child6 {
+  position: relative;
+
+  border-radius: var(--br-xs);
+  width: 237px;
+  height: 85px;
+}
+.div4,
+.my-balance {
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-weight: 500;
+}
+.div4 {
+  top: 30px;
+  font-size: var(--font-size-xl);
+  font-weight: 600;
+  color: var(--color-gray);
+}
+.frame-parent6 {
+  position: relative;
+}
+.my-balance-parent {
+  position: absolute;
+  top: 14px;
+  left: 31px;
+  width: 94px;
+  height: 60px;
+}
+.frame-parent6 {
+  /* text-align: left; */
+  font-size: var(--font-size-base);
+  color: var(--color-darkgray-100);
+  font-family: var(--font-poppins);
+}

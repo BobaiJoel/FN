@@ -1,0 +1,142 @@
+.apr-27-22,
+.order-revenue {
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-weight: 500;
+}
+.apr-27-22 {
+  top: 24px;
+  font-weight: 300;
+}
+.order-revenue-parent {
+  position: absolute;
+  top: 3px;
+  left: 70px;
+  width: 120px;
+  height: 48px;
+}
+.icon {
+  top: 0;
+  left: 0;
+  width: 54px;
+  height: 54px;
+}
+.div10,
+.icon,
+.item {
+  position: absolute;
+}
+.item {
+  top: 0;
+  left: 0;
+  width: 190px;
+  height: 54px;
+}
+.div10 {
+  top: 15px;
+  left: 384px;
+  font-weight: 500;
+  color: var(--color-mediumspringgreen);
+  text-align: right;
+}
+.item-parent {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 440px;
+  height: 54px;
+}
+.div11 {
+  position: absolute;
+  top: 15px;
+  left: 388px;
+  font-weight: 500;
+  color: var(--color-mediumspringgreen);
+  text-align: right;
+}
+.item-group {
+  position: absolute;
+  top: 136px;
+  left: 0;
+  width: 440px;
+  height: 54px;
+}
+.withdrawal-initiated-parent {
+  position: absolute;
+  top: 3px;
+  left: 70px;
+  width: 164px;
+  height: 48px;
+}
+.div12,
+.item2 {
+  position: absolute;
+}
+.item2 {
+  top: 0;
+  left: 0;
+  width: 234px;
+  height: 54px;
+}
+.div12 {
+  top: 15px;
+  left: 376px;
+  font-weight: 500;
+  color: var(--color-crimson);
+  text-align: right;
+}
+.frame-parent15,
+.item-container {
+  position: relative;
+  top: 68px;
+  left: 0;
+  width: 440px;
+  height: 54px;
+}
+.frame-parent15 {
+  top: 98px;
+  left: 30px;
+  height: 190px;
+}
+.history-transactions,
+.view-all {
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-weight: 600;
+}
+.view-all {
+  top: 5px;
+  left: 378px;
+  font-size: var(--font-size-base);
+  font-weight: 500;
+  color: var(--color-deepskyblue);
+}
+.frame-parent14 {
+  position: relative;
+  /* top: 30px;
+  left: 30px; */
+}
+.history-transactions-parent {
+  position: absolute;
+  top: 30px;
+  left: 30px;
+  width: 440px;
+  height: 33px;
+  font-size: var(--font-size-3xl);
+}
+.frame-parent14 {
+  /* top: 701px;
+  left: 962px; */
+  border-radius: var(--br-xs);
+  background-color: var(--white);
+  border: 1px solid var(--color-whitesmoke);
+  box-sizing: border-box;
+  width: 90%;
+  height: 318px;
+  text-align: left;
+  font-size: var(--font-size-base);
+  color: var(--color-gray);
+  font-family: var(--font-poppins);
+}

@@ -1,0 +1,105 @@
+.login1 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 30px;
+  text-transform: uppercase;
+  color: #000;
+  height: 300;
+}
+.how-to-i {
+  /* position: absolute;
+  top: 31px;
+  left: 14px; */
+  /* font-size: 16px; */
+  font-size: 13px;
+  color: #525252;
+  padding-bottom: 10px;
+}
+.frame-icon,
+.password {
+  /* position: absolute;
+  top: 17px;
+  left: 48px; */
+}
+.frame-icon {
+  top: 14px;
+  left: 18px;
+  width: 24px;
+  height: 24px;
+  overflow: hidden;
+  object-fit: cover;
+}
+.password-parent,
+.username-parent {
+  position: relative;
+  /* top: 149px;
+  left: 0; */
+  border-radius: 16px;
+  background-color: rgba(240, 237, 255, 0.8);
+  width: 364px;
+  height: 52px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.username-parent {
+  top: 79px;
+}
+.login-now {
+  position: absolute;
+  top: 17px;
+  left: 30px;
+}
+.login-now-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 16px;
+  background: linear-gradient(99.78deg, #ec6971, #aa272f);
+  box-shadow: 0 8px 21px rgba(0, 0, 0, 0.16);
+  width: 124px;
+  height: 52px;
+  color: #fff;
+}
+.login-parent1 {
+  /* position: absolute;
+  top: 200px;
+  left: 0; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  flex: 1;
+}
+.pngwing-1-icon1 {
+  margin-left: 40px;
+
+  object-fit: cover;
+}
+.password-parent input {
+  background: none;
+  outline: none;
+  border: none;
+  line-height: 1;
+  font-weight: 600;
+  font-size: 1.1rem;
+  color: #333;
+  margin-left: 10px;
+}
+
+.password-parent input::placeholder {
+  color: #aaa;
+  font-weight: 500;
+}
+.frame-parentOn {
+  width: 364px;
+  height: 90%;
+  text-align: left;
+  font-size: 12px;
+  color: #1c1c1c;
+  font-family: Poppins;
+}
