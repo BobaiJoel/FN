@@ -52,19 +52,21 @@ export async function reqister(inputs) {
   }
 }
 export async function login(inputs) {
-  const res = await axios.post(`${url()}/api/v1/user`, inputs).catch((err) => {
-    toast.error(err.response.data, {
-      position: "top-center",
-      autoClose: 5000,
-      hideProgressBar: false,
-      closeOnClick: true,
-      pauseOnHover: true,
-      draggable: true,
-      progress: undefined,
-      theme: "light",
+  const res = await axios
+    .post(`${url()}/api/v1/user/login`, inputs)
+    .catch((err) => {
+      toast.error(err.response.data, {
+        position: "top-center",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "light",
+      });
+      console.log(err.response.data);
     });
-    console.log(err.response.data);
-  });
 
   if (res) {
     const data = await res;
