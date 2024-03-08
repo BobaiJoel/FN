@@ -278,7 +278,7 @@ const OtpVerification = () => {
                   onClick={submitOtp}
                 >
                   <div className="send-money-wrapper" style={{ width: "100%" }}>
-                    <div className="send-money">Send money</div>
+                    <div className="send-money">Verify</div>
                   </div>
                 </div>
               )}
