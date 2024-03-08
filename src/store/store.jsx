@@ -3,6 +3,8 @@ import { create } from "zustand";
 export const useAuthStore = create((set) => ({
   auth: {
     user: [],
+    email: "",
+    pass: "",
     activeNavItem: "Overview",
     transaction: [],
     isLoggedIn: false,
@@ -29,6 +31,8 @@ export const useAuthStore = create((set) => ({
     paymentPin: false,
     deactivated: false,
   },
+  setEmail: (str) => set((state) => ({ auth: { ...state.auth, email: str } })),
+  setPass: (str) => set((state) => ({ auth: { ...state.auth, pass: str } })),
   setDeactivated: (bool) =>
     set((state) => ({ auth: { ...state.auth, deactivated: bool } })),
   setPaymentPin: (bool) =>

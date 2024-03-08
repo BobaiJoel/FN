@@ -14,6 +14,7 @@ const Login = () => {
   // const moveTo = useNavigate();
   const side = useMediaQuery("(min-width: 1086px)");
   const setUser = useAuthStore((state) => state.setUser);
+  const setTransaction = useAuthStore((state) => state.setTransaction);
   const setIsLoggedIn = useAuthStore((state) => state.setIsLoggedIn);
   let isLoggedIn = useAuthStore((state) => {
     return state.auth.isLoggedIn;
@@ -36,20 +37,52 @@ const Login = () => {
     }
   };
 
+  const getTransactions = async (id) => {
+    const res = await axios
+      .post(
+        `${url()}/api/v1/transaction/get`,
+        {
+          userTransactionId: id,
+        },
+        {
+          withCredentials: true,
+        }
+      )
+      .catch((err) => {
+        // toast.error(err.response.data);
+        console.log(err?.response?.data);
+        // console.log(err);
+      });
+
+    if (res) {
+      const data = await res?.data;
+      return data;
+    }
+  };
+
   useEffect(() => {
     if (firstRender) {
       firstRender = false;
-      sendRequest().then((data) => {
+      sendRequest().then(async (data) => {
         try {
-          console.log(data.user);
-          setIsLoggedIn(true);
-          setUser(data?.user);
+          if (data?.user) {
+            console.log(data?.user);
+
+            await setUser(data?.user);
+            setIsLoggedIn(true);
+            getTransactions(data?.user?._id).then((data) => {
+              setTransaction(data);
+              //   console.log(data);
+            });
+          } else {
+            setIsLoggedIn(false);
+          }
         } catch (error) {
           setIsLoggedIn(false);
         }
       });
     }
-  });
+  }, []);
   // downwards is to keep the user LOGIN
   // useEffect(() => {
   //   const sendRequest = async () => {

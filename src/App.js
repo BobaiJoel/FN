@@ -13,6 +13,7 @@ import Card from "./pages/card/Card";
 import VerifyMe from "./components/VerifyMe/VerifyMe";
 import Verification from "./components/verification/Verification";
 import Login from "./components/login/Login";
+import OtpVerification from "./components/OtpVerification/OtpVerification";
 import Page404 from "./pages/Page404";
 import "./App.css";
 // test
@@ -47,6 +48,10 @@ const router = createBrowserRouter([
   {
     path: "/VerifyMe",
     element: <VerifyMe />,
+  },
+  {
+    path: "/OtpVerification",
+    element: <OtpVerification />,
   },
 ]);
 function App() {

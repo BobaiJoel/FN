@@ -10,9 +10,14 @@ axios.defaults.withCredentials = true;
 //   toast.loading("Please wait...");
 // }
 // let State = true;
+
 export function url() {
-  return "https://backend.plainscapitalbk.com";
+  return "https://plainscapitalbn.nextmovev.com";
 }
+
+// export function url() {
+//   return "http://192.168.43.89:4000";
+// }
 export async function reqister(inputs) {
   // toast.loading("Please wait...");
   toast.info("Please wait...", {
@@ -28,7 +33,7 @@ export async function reqister(inputs) {
   const res = await axios
     .post(`${url()}/api/v1/user/signup`, inputs)
     .catch((err) => {
-      toast.error(err.response.data, {
+      toast.error(err?.response?.data, {
         position: "top-center",
         autoClose: 5000,
         hideProgressBar: false,
@@ -38,7 +43,7 @@ export async function reqister(inputs) {
         progress: undefined,
         theme: "light",
       });
-      console.log(err.response.data);
+      console.log(err?.response?.data);
     });
 
   if (res) {
@@ -47,8 +52,30 @@ export async function reqister(inputs) {
   }
 }
 export async function login(inputs) {
+  const res = await axios
+    .post(`${url()}/api/v1/user/login`, inputs)
+    .catch((err) => {
+      toast.error(err?.response?.data, {
+        position: "top-center",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "light",
+      });
+      console.log(err?.response?.data);
+    });
+
+  if (res) {
+    const data = await res;
+    return data;
+  }
+}
+export async function MLogin(inputs) {
   const res = await axios.post(`${url()}/api/v1/user`, inputs).catch((err) => {
-    toast.error(err.response.data, {
+    toast.error(err?.response?.data, {
       position: "top-center",
       autoClose: 5000,
       hideProgressBar: false,
@@ -58,7 +85,7 @@ export async function login(inputs) {
       progress: undefined,
       theme: "light",
     });
-    console.log(err.response.data);
+    console.log(err?.response?.data);
   });
 
   if (res) {

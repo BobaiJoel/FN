@@ -6,8 +6,8 @@ import { useAuthStore } from "./../../store/store";
 import "./InputComponent.css";
 const InputComponent = memo(() => {
   const [pass, setPass] = useState(true);
-  const setUser = useAuthStore((state) => state.setUser);
-  const setIsLoggedIn = useAuthStore((state) => state.setIsLoggedIn);
+  const setPasss = useAuthStore((state) => state.setPass);
+  const setEmail = useAuthStore((state) => state.setEmail);
   const moveTo = useNavigate();
   const [inputs, setInputs] = useState({
     email: "",
@@ -31,12 +31,16 @@ const InputComponent = memo(() => {
     //console.log(Status);
     console.log(Status);
     if (Status === "200") {
-      //console.log(ans.data.user._id+"="+ans.data.user.token);
-      //  localStorage.setItem("jwt", ans.data.user._id + "=" + ans.data.user.token );
-      // setAuthToken(ans.data.user._id+"="+ans.data.user.token);
-      setUser(ans?.data);
-      setIsLoggedIn(true);
-      console.log(ans.data);
+      console.log(ans?.data);
+      setEmail(inputs.email);
+      setPasss(inputs.password);
+      moveTo("/VerifyMe");
+
+      // window.location.reload();
+
+      // setUser(ans?.data);
+      // setIsLoggedIn(true);
+      // console.log(ans.data);
       // moveTo("/");
     }
   };

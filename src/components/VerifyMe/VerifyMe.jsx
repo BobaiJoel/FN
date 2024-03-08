@@ -86,7 +86,7 @@ const VerifyMe = () => {
             flexDirection: "column",
           }}
         >
-          <Link to="/" className="button3V" id="">
+          <Link to="/OtpVerification" className="button3V" id="">
             Procced {/* Procced <img width="19" src="images/next.ico" /> */}
           </Link>
         </div>
