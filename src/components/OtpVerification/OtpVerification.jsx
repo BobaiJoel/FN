@@ -129,7 +129,7 @@ const OtpVerification = () => {
       setUser(ans?.data);
       setIsLoggedIn(true);
       // console.log(ans.data);
-      moveTo("/app").then(window.location.reload());
+      moveTo("/login");
     }
   };
   return (
