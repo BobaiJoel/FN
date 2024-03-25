@@ -303,7 +303,7 @@ const Activity = () => {
                       }}
                       onChange={handleInputChange}
                       value={input}
-                      maxLength="12"
+                      maxLength="15"
                       type="number"
                       placeholder="Enter Account number"
                       required
