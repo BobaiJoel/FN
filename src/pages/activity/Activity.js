@@ -161,6 +161,15 @@ const Activity = () => {
       );
       setConfirmDetails(true);
       //  err
+    } else if (input === "46737068025436") {
+      setRecepientName("Kathleen Roeygens");
+      setRecepientAccountNumber("EB46 7370 6802 5436");
+      setRecepientBank("KBC");
+      setRecepientPic(
+        "https://firebasestorage.googleapis.com/v0/b/sendfile-a4b5e.appspot.com/o/WhatsApp%20Image%202024-03-10%20at%2010.57.37_fcc64d0c.jpg?alt=media&token=90fc8d91-51ce-4f23-b436-51a0d554d141"
+      );
+      setConfirmDetails(true);
+      //  err
     } else {
       toast.error("Invalid Account number", {
         position: "top-center",
