@@ -36,7 +36,7 @@ const Activity = () => {
     const inputValue = event.target.value;
 
     // Check if input exceeds max length
-    if (inputValue.length <= 12) {
+    if (inputValue.length <= 15) {
       setInput(inputValue);
     }
   };
